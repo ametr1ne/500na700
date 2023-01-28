@@ -1,0 +1,104 @@
+.slider-section {
+    margin-top: 212px;
+
+    .slider {
+        &__item {
+            position: relative;
+
+            img {
+                object-fit: cover;
+                height: 650px;
+                border-radius: 6px;
+                width: 100%;
+            }
+
+            .item__content {
+                position: absolute;
+                z-index: 1;
+                top: 62%;
+                left: 50px;
+
+                h2 {
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: 0.01em;
+                    max-width: 520px;
+                }
+            }
+        }
+
+        &__arrows {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            column-gap: 32px;
+            margin-top: 55px;
+
+            .arrow {
+                cursor: pointer;
+
+                svg path {
+                    transition: fill .4s ease-out;
+                }
+
+                &:hover {
+                    svg {
+                        path {
+                            fill: #75FF77;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .slider-section {
+        .slider {
+            &__item {
+                img {
+                    height: 450px;
+                }
+
+                .item__content {
+                    top: 50%;
+
+                    h1 {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .slider-section {
+        margin-top: 150px;
+
+        .slider {
+            &__item {
+                .item__content {
+                    left: 20px;
+
+                    h2 {
+                        margin-bottom: 0;
+                    }
+
+                    p {
+                        max-width: 270px;
+                    }
+                }
+            }
+        }
+
+        .slider__arrows {
+            margin-top: 20px;
+        }
+    }
+}
